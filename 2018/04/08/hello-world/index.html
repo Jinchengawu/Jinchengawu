@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="金城阿武">
 <meta property="og:description" content="这是第一篇博客   晴 微风 温度 12-24°C   这是该站的第一篇博客，希望记录下来搭建博客的有趣过程与大家分享。该博是通过nodejs环境,hexo插件开发   1.首先去github上开辟一个新库;2.安装nodejs环境 (下载地址https://npm.taobao.org/mirrors/node/v8.9.3/node-v8.9.3-x64.msi) 2.1安装node,npm">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-08T14:10:36.582Z">
+<meta property="og:updated_time" content="2018-04-08T14:29:20.653Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="金城阿武">
 <meta name="twitter:description" content="这是第一篇博客   晴 微风 温度 12-24°C   这是该站的第一篇博客，希望记录下来搭建博客的有趣过程与大家分享。该博是通过nodejs环境,hexo插件开发   1.首先去github上开辟一个新库;2.安装nodejs环境 (下载地址https://npm.taobao.org/mirrors/node/v8.9.3/node-v8.9.3-x64.msi) 2.1安装node,npm">
@@ -264,7 +264,7 @@
 <p>2.7 优化博客<br>        1）UI 优化 下载相关的主题，修改theme: ***<br>        2）域名解析    </p>
 <blockquote>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">	function aaa()&#123;</span><br><span class="line">	let a=0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//前端面试题ajax，豆瓣数据解析</span><br><span class="line">//地址https://api.douban.com/v2/movie/top250</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">	let sc=document.createElement(&quot;script&quot;);//创建一个script标签</span><br><span class="line">	sc.type=&quot;text/javascript&quot;;//给标签追加 type属性</span><br><span class="line">	sc.src=&quot;https://api.douban.com/v2/movie/top250?callback=fn&quot;;//给标签src添加路径</span><br><span class="line">	document.body.appendChild(sc);//为html文档添加该标签节点对象</span><br><span class="line"></span><br><span class="line">	//访问地址的回掉函数</span><br><span class="line">	function fn(data) &#123;</span><br><span class="line">		//输出原始数据</span><br><span class="line">		console.log(data);</span><br><span class="line"></span><br><span class="line">		//遍历该数据,该数据通常是一个对象数组，或者一个对象</span><br><span class="line">		for(let i in data.subjects)&#123;</span><br><span class="line">			console.log(data.subjects[i]);//取出单个电影对象</span><br><span class="line">			console.log(data.subjects[i].title);//取出电影对象的名称</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="这是第二篇博客"><a href="#这是第二篇博客" class="headerlink" title="这是第二篇博客"></a>这是第二篇博客</h2><p>#第二篇</p>
 
@@ -325,7 +325,7 @@
         <p><span>本文标题:</span><a href="/2018/04/08/hello-world/"></a></p>
         <p><span>文章作者:</span><a href="/" title="访问 金城阿武 的个人博客">金城阿武</a></p>
         <p><span>发布时间:</span>2018年04月08日 - 16时55分</p>
-        <p><span>最后更新:</span>2018年04月08日 - 22时10分</p>
+        <p><span>最后更新:</span>2018年04月08日 - 22时29分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/04/08/hello-world/" title="">http://yoursite.com/2018/04/08/hello-world/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/04/08/hello-world/　　作者: 金城阿武" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
