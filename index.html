@@ -152,13 +152,73 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ES6-Objecty" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="ES6对象与ES5对象的差别"><a href="#ES6对象与ES5对象的差别" class="headerlink" title="ES6对象与ES5对象的差别"></a>ES6对象与ES5对象的差别</h2><blockquote>
+</blockquote>
+<p> 晴-小雨 微风 温度 12-24°C</p>
+<blockquote>
+</blockquote>
+<blockquote>
+</blockquote>
+<p>在es6中的面相对象与es5中的面向对象的区别是极大的，ea6中的面相对象则更像原汁原味的后端语言像java,c++等，而且在es5中的class保留字，在es6中也成了实际有效的关键字。</p>
+<p>我们来做个对比，</p>
+<p>es5中创建一个对象需要用函数的形式去仿造后段语言中对象的形式去造对象:</p>
+<blockquote>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br></pre></td><td class="code"><pre><span class="line">function ren(name,age)&#123;</span><br><span class="line"></span><br><span class="line">    this.name=name;</span><br><span class="line"></span><br><span class="line">    this.age=age;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ren.prototype.aet = function(foot)&#123;</span><br><span class="line"></span><br><span class="line">    console.log(this.name+&quot;aet&quot;+foot);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var xiaoming = new ren(&quot;xiaoming&quot;,24);</span><br><span class="line"></span><br><span class="line">xiaoming.aet(&quot;面包&quot;);</span><br><span class="line"></span><br><span class="line">/*这是es5中 主流创建对象的方法之一,方法写在原型链中*/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">而es6中造对象则更为直观与简便，</span><br><span class="line"></span><br><span class="line">class  ren()&#123;</span><br><span class="line"></span><br><span class="line">    //先创建构造函数</span><br><span class="line"></span><br><span class="line">    constructor(name,sex,age,id)&#123;</span><br><span class="line"></span><br><span class="line">        this.name=name;</span><br><span class="line"></span><br><span class="line">        this.sex=sex;</span><br><span class="line"></span><br><span class="line">        this.age=age;</span><br><span class="line"></span><br><span class="line">        this.id=id;</span><br><span class="line"></span><br><span class="line">&#125;    </span><br><span class="line"></span><br><span class="line">//ES6中的对象的方法不需要单独写在原型链中</span><br><span class="line"></span><br><span class="line">     say()&#123;</span><br><span class="line"></span><br><span class="line">        console.log(this.name+&quot;说话&quot;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //ES6中多了静态方法的声明与使用，静态方法是实例对象无法调用的，是通过原型.方法名进行调用，静态方法 多数用于存储 公共方法，比如说要给 这一批 同类对象 进行排序等</span><br><span class="line"></span><br><span class="line">    static paixu()&#123;</span><br><span class="line"></span><br><span class="line">        console.log(this);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let ren1=new ren(&quot;小王&quot;,&quot;男&quot;,18,&quot;10010&quot;);</span><br><span class="line"></span><br><span class="line">//输出一下该对象</span><br><span class="line"></span><br><span class="line">console.log(run1);</span><br><span class="line"></span><br><span class="line">//调用ren1对象的say方法</span><br><span class="line"></span><br><span class="line">ren1.say();</span><br><span class="line"></span><br><span class="line">//调用原型中的排序方法，该方法在此处并没有实际作用</span><br><span class="line"></span><br><span class="line">ren.paixu();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//ES6中的对象继承，与ES5不同，ES6中的继承 是与后端语言十分相像，</span><br><span class="line"></span><br><span class="line">// 但是这里的继承  格式 是   class + 子类名 + extends + 基类 &#123;&#125;;</span><br><span class="line"></span><br><span class="line">class student extends ren&#123;</span><br><span class="line"></span><br><span class="line">//这里需要注意  构造函数的继承  需要 这样写</span><br><span class="line"></span><br><span class="line">// constructor (参数)&#123;</span><br><span class="line"></span><br><span class="line">    super(基类参数);</span><br><span class="line"></span><br><span class="line">    ***************</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">    constructor(name,sex,age,id,sid)&#123;</span><br><span class="line"></span><br><span class="line">    super(name,sex,age,id);</span><br><span class="line"></span><br><span class="line">    this.sid=sid;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">    kaoshi()&#123;</span><br><span class="line"></span><br><span class="line">    console.log(this.name+&quot;考试&quot;);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let student1 = new student();</span><br><span class="line"></span><br><span class="line">student1.name=&quot;xiaoming&quot;;</span><br><span class="line"></span><br><span class="line">student.say();</span><br><span class="line"></span><br><span class="line">console.log(studnet1);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/11/ES6-Objecty/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-world2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="这是第二篇博客"><a href="#这是第二篇博客" class="headerlink" title="这是第二篇博客"></a>这是第二篇博客</h2><blockquote>
+<h2 id="javascript-ajax请求与跨域问题"><a href="#javascript-ajax请求与跨域问题" class="headerlink" title="javascript-ajax请求与跨域问题"></a>javascript-ajax请求与跨域问题</h2><blockquote>
 </blockquote>
 <p> 晴 微风 温度 12-24°C</p>
 <blockquote>
@@ -215,7 +275,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="这是第一篇博客"><a href="#这是第一篇博客" class="headerlink" title="这是第一篇博客"></a>这是第一篇博客</h2><blockquote>
+<h2 id="如何搭建自己博客"><a href="#如何搭建自己博客" class="headerlink" title="如何搭建自己博客"></a>如何搭建自己博客</h2><blockquote>
 </blockquote>
 <p> 晴 微风 温度 12-24°C</p>
 <blockquote>
