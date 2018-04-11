@@ -152,6 +152,62 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-arrayFunction" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="论javascript中array中的一些实用方法"><a href="#论javascript中array中的一些实用方法" class="headerlink" title="论javascript中array中的一些实用方法"></a>论javascript中array中的一些实用方法</h2><blockquote>
+</blockquote>
+<p> 晴-小雨 微风 温度 12-27°C</p>
+<blockquote>
+</blockquote>
+<p> 本章主要介绍了array中一些实用的方法</p>
+<blockquote>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">//forEach方法,</span><br><span class="line">				checkEvery()&#123;</span><br><span class="line">					// forEach遍历</span><br><span class="line">					this.productList.forEach(item=&gt;item.isSelected=this.checkAll);</span><br><span class="line">				&#125;,</span><br><span class="line">				checkOne()&#123;</span><br><span class="line">					//every</span><br><span class="line">					</span><br><span class="line">					//every函数  第一个参数 (callback,[元素,下标,数组])执行 callback 时使用的 this 值</span><br><span class="line">					this.productList.every(item=&gt;&#123;</span><br><span class="line">						// console.log(item);</span><br><span class="line">						return this.checkAll=item.isSelected&#125;);</span><br><span class="line">					/*	this.checkAll=this.productList.every(item=&gt;item.isSelected==true);*/</span><br><span class="line">				&#125;,</span><br><span class="line">				remove(index)&#123;</span><br><span class="line">					/*array.filter 的第一个参数为 callback (用来测试数组的每个元素的函数。调用时使用参数 (element, index, array)。返回true表示保留该元素（通过测试），false则不保留。)  </span><br><span class="line">					 array.filter  return 一个新的通过测试的元素的集合的数组</span><br><span class="line">					*/</span><br><span class="line">					this.productList = this.productList.filter((item,id)=&gt;&#123;</span><br><span class="line">						return id !== index;</span><br><span class="line">					&#125;);</span><br><span class="line">				&#125;,</span><br><span class="line">				sum()&#123;</span><br><span class="line">					//prev(item):累加器,next:array中的每个元素</span><br><span class="line">					return  this.productList.reduce((prev,next)=&gt;&#123;</span><br><span class="line">						if(next.isSelected==true)&#123;</span><br><span class="line">							return prev +=  next.price * next.count;</span><br><span class="line">						&#125;else&#123;</span><br><span class="line">							return prev;</span><br><span class="line">						&#125;</span><br><span class="line">						</span><br><span class="line">					&#125;,0);</span><br><span class="line">				&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/11/arrayFunction/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-ES6-Objecty" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -223,7 +279,7 @@
 <p> 晴 微风 温度 12-24°C</p>
 <blockquote>
 </blockquote>
-<p>这是该站的第一篇博客，希望记录下来搭建博客的有趣过程与大家分享。<br>该博是通过nodejs环境,hexo插件开发</p>
+<p> javascript-ajax请求与跨域问题的实现</p>
 <blockquote>
 </blockquote>
 <!-- ![这是头像](../images/head.jpg) -->
